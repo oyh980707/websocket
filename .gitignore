@@ -1,0 +1,7 @@
+# Created by .ignore support plugin (hsz.mobi)
+!/websocket.iml
+!/.idea/
+!/server/target
+!/web/target
+!/server/server.iml
+!/web/web.iml
