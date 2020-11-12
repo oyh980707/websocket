@@ -13,21 +13,13 @@ import java.util.stream.Collectors;
 public class MessageHeaders implements Map<String, String>, Serializable {
 	
 	final Map<String, String> headers;
-	/**
-	 * message type
-	 */
+	/** message type */
 	public static final String TYPE = "Type";
-	/**
-	 * message ownership module
-	 */
-	public static final String MODULE = "Module";
-	/**
-	 * message ownership module
-	 */
+	/** message tag */
+	public static final String TAG = "Tag";
+	/** message ownership module */
 	public static final String CONTENT = "Content";
-	/**
-	 * message auth
-	 */
+	/** message auth */
 	public static final String AUTH = "Auth";
 	
 	public MessageHeaders() {
@@ -59,12 +51,12 @@ public class MessageHeaders implements Map<String, String>, Serializable {
 		return (value != null ? value : "");
 	}
 	
-	public void setModule(String module){
-		put(MODULE, module);
+	public void setTag(String module){
+		put(TAG, module);
 	}
 	
-	public String getModule(){
-		String value = get(MODULE);
+	public String getTag(){
+		String value = get(TAG);
 		return (value != null ? value : "");
 	}
 	

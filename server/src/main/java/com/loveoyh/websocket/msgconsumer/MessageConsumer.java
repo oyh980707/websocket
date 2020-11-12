@@ -1,4 +1,4 @@
-package com.loveoyh.websocket.monitor.msgconsumer;
+package com.loveoyh.websocket.msgconsumer;
 
 import com.loveoyh.websocket.common.domain.CommonMsg;
 import com.loveoyh.websocket.common.domain.MessageHeaders;

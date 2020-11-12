@@ -1,9 +1,9 @@
 package com.loveoyh.websocket.websocket;
 
 import com.loveoyh.websocket.common.domain.CommonMsg;
-import com.loveoyh.websocket.monitor.handler.MessageHandler;
-import com.loveoyh.websocket.monitor.handler.MessageHandlerChain;
-import com.loveoyh.websocket.monitor.handler.MessageHandlerFactory;
+import com.loveoyh.websocket.common.handler.MessageHandler;
+import com.loveoyh.websocket.common.handler.MessageHandlerChain;
+import com.loveoyh.websocket.common.handler.MessageHandlerFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;

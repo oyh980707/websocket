@@ -6,8 +6,11 @@ package com.loveoyh.websocket.common.domain;
  */
 public enum  MessageType {
 
-	ERROR_LOG("error_log"),
-	INFO("info");
+	NOTICE("notice"),
+	LOG("log"),
+	INFO("info"),
+	CHAT("chat"),
+	ADVERTISE("advertise");
 	
 	private String type;
 	
