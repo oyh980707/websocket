@@ -9,10 +9,18 @@ import com.loveoyh.websocket.websocket.WebSocketServer;
 
 import java.io.IOException;
 
-/**
+/**双重检查锁+防止指令重排的单例模式
  * @Created by oyh.Jerry to 2020/11/11 09:21
  */
 public class ClearimpHandler implements MessageHandler {
+	
+	private static volatile ClearimpHandler clearimpHandler;
+	
+	private ClearimpHandler(){
+		if(null != clearimpHandler){
+			throw new RuntimeException("Two instances are not allowed to be created!");
+		}
+	}
 	
 	@Override
 	public boolean handle(WebSocketServer socket, CommonMsg commonMsg) {
@@ -26,6 +34,17 @@ public class ClearimpHandler implements MessageHandler {
 			return false;
 		}
 		return true;
+	}
+	
+	public static ClearimpHandler getInstance(){
+		if(clearimpHandler == null){
+			synchronized (ClearimpHandler.class){
+				if(clearimpHandler == null) {
+					clearimpHandler = new ClearimpHandler();
+				}
+			}
+		}
+		return clearimpHandler;
 	}
 	
 }

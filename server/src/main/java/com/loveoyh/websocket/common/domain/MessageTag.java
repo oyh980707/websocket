@@ -1,7 +1,7 @@
 package com.loveoyh.websocket.common.domain;
 
 /**
- * 消息模块定义枚举
+ * 消息标签定义枚举
  * @Created by oyh.Jerry to 2020/11/10 11:19
  */
 public enum MessageTag {
