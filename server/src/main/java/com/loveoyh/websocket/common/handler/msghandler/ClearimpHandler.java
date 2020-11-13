@@ -9,7 +9,7 @@ import com.loveoyh.websocket.websocket.WebSocketServer;
 
 import java.io.IOException;
 
-/**双重检查锁+防止指令重排的单例模式
+/**
  * @Created by oyh.Jerry to 2020/11/11 09:21
  */
 public class ClearimpHandler implements MessageHandler {

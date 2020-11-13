@@ -8,6 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
+ * 管理消息处理器工厂类
  * @Created by oyh.Jerry to 2020/11/11 09:58
  */
 public class MessageHandlerFactory {
@@ -19,11 +20,11 @@ public class MessageHandlerFactory {
 		CACHED_HANDLER.put(MessageTag.SETTLEMENT_CLEARIMP.getTag(),ClearimpHandler.getInstance());
 	}
 	
-	public static MessageHandler getHandler(String type) {
-		if (type == null || type.isEmpty()) {
+	public static MessageHandler getHandler(String tag) {
+		if (tag == null || tag.isEmpty()) {
 			return null;
 		}
-		return CACHED_HANDLER.get(type);
+		return CACHED_HANDLER.get(tag);
 	}
 	
 	

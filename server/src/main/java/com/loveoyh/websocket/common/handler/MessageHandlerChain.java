@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
+ * 管理 消息处理器对象 类
  * @Created by oyh.Jerry to 2020/11/10 16:05
  */
 public class MessageHandlerChain {

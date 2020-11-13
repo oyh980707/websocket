@@ -11,6 +11,7 @@ import java.io.IOException;
 
 /**
  * global message handler
+ * 双重检查锁+防止指令重排的单例模式
  * @Created by oyh.Jerry to 2020/11/12 09:47
  */
 public class GlobalMsgHandler implements MessageHandler {
